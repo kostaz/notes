@@ -46,7 +46,9 @@ def countLeadingChars(s, ch):
 ```
 
 Well, `countLeadingChars` returns a number of leading characters `ch`
-in the string `s`. Let's test it by writing a simple test function:
+in the string `s`. For example, `countLeadingChars("QQ42", 'Q')` returns 2.
+
+Let's test it by writing a simple test function:
 
 ```
 def test_countLeadingChars(s, ch):
@@ -87,10 +89,11 @@ Excerpt:
 Return a string containing the values v1, v2, ... packed according to the given format. The arguments must match the values required by the format exactly.
 
 Ken uses various formatters (`fmt`) in the code. Let's look at some of them here
-and the others formatters will be explained in the places of usage.
+and the others formatters will be explained in the place of usage.
 
-`struct.pack('<B', n)`
-Converts a number `n` of type `unsigned char` to little-endian (controlled by `<`) string
+**`struct.pack('<B', n)`**
+Converts a number `n` of type `unsigned char` to little-endian string.
+Note: Little-Endian defined controlled by `<`.
 
 Let's test it:
 ```
@@ -107,7 +110,12 @@ Well, the output is:
 $ python test_struct_pack.py | od -t x1
 0000000 00 0a 01 0a 40 0a ff 0a
 ```
+Where the `unsigned char` numbers (0, 1, 64, and 255) were converted to binary little-endian string.
 
 Note: `0x0a` stands for line feed as seen here:
 http://www.theasciicode.com.ar/ascii-control-characters/line-feed-ascii-code-10.html
+
+Let's look at some more examples.
+
+
 
