@@ -92,6 +92,7 @@ Ken uses various formatters (`fmt`) in the code. Let's look at some of them here
 and the others formatters will be explained in the place of usage.
 
 **`struct.pack('<B', n)`**
+
 Converts a number `n` of type `unsigned char` to little-endian string.
 Note: Little-Endian defined controlled by `<`.
 
@@ -116,6 +117,12 @@ Note: `0x0a` stands for line feed as seen here:
 http://www.theasciicode.com.ar/ascii-control-characters/line-feed-ascii-code-10.html
 
 Let's look at some more examples.
+
+**`struct.pack('<cH', '\xfd', n)`**
+
+Converts two numbers - `n` of type `unsigned char` to little-endian string.
+Note: Little-Endian defined controlled by `<`.
+
 
 
 
